@@ -3,26 +3,26 @@
 void get_list_contacts(Contacts contacts[8], int num)
 {
     int tmp = 0;
-    string index;
-    cout << right
-        << "|" << setw (10) << "index" << "|"
-        << setw (10) << "first name" << "|"
-        << setw (10) << "last name" << "|"
-        << setw (10) << "nickname" << "|" << endl;
+    std::string index;
+    std::cout << std::right
+        << "|" << std::setw (10) << "index" << "|"
+        << std::setw (10) << "first name" << "|"
+        << std::setw (10) << "last name" << "|"
+        << std::setw (10) << "nickname" << "|" << std::endl;
     while (tmp < num)
     {
-        cout << right
-            << "|" << setw (10) << tmp + 1 << "|"
-            << setw (10) << contacts[tmp].get_first_name() << "|"
-            << setw (10) << contacts[tmp].get_last_name() << "|"
-            << setw (10) << contacts[tmp].get_nickname() << "|" << endl;
+        std::cout << std::right
+            << "|" << std::setw (10) << tmp + 1 << "|"
+            << std::setw (10) << contacts[tmp].get_first_name() << "|"
+            << std::setw (10) << contacts[tmp].get_last_name() << "|"
+            << std::setw (10) << contacts[tmp].get_nickname() << "|" << std::endl;
         tmp++;
     }
-    cout << "Enter index of contact you need" << endl;
+    std::cout << "Enter index of contact you need" << std::endl;
     while (1)
     {
         tmp = 0;
-        cin >> index;
+        std::cin >> index;
         try
         {
             tmp = stoi(index);
@@ -32,7 +32,7 @@ void get_list_contacts(Contacts contacts[8], int num)
             std::cerr << "Invalid index. Try again" << '\n';
         }
         if (tmp < 1 || tmp > num)
-            cout << "Invalid index. Try again" << endl; 
+            std::cout << "Invalid index. Try again" << std::endl; 
         else
             break;
     }
@@ -43,17 +43,17 @@ int main(void)
 {
     int num_contact = 0;
     Contacts contacts[8];
-    string command;
+    std::string command;
     while (1)
     {
-        cout << "Enter the command\n";
-        cin >> command;
+        std::cout << "Enter the command\n";
+        std::cin >> command;
         if (command == "EXIT")
             exit (0);
         else if (command == "ADD")
         {
             if (num_contact > 7)
-                cout << "No more space in phonebook\n";
+                std::cout << "No more space in phonebook\n";
             else
             {
                 contacts[num_contact].init();
@@ -63,12 +63,12 @@ int main(void)
         else if (command == "SEARCH")
         {
             if (num_contact == 0)
-                cout << "Phonebook is empty" << endl;
+                std::cout << "Phonebook is empty" << std::endl;
             else
                 get_list_contacts(contacts, num_contact);
         }
         else
-           cout << "Invalid command, try again\n";
+           std::cout << "Invalid command, try again\n";
     }
     return (0);
 }
