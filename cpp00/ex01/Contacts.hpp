@@ -1,5 +1,5 @@
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef CONTACTS_HPP
+#define CONTACTS_HPP
 
 #include <iostream>
 #include <string>

@@ -1,14 +1,14 @@
 .PHONY = all clean fclean re
 
-NAME = phonebook
+NAME = zombie
 
 CC = clang++
 
 GFLAGS = -Wall -Wextra -Werror
 
-HEAD = Contacts.hpp
+HEAD = HumanB.hpp HumanA.hpp Weapon.hpp
 
-SRCS = Contacts.cpp main.cpp
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS =$(SRCS:.cpp=.o)
 

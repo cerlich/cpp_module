@@ -1,14 +1,12 @@
 .PHONY = all clean fclean re
 
-NAME = phonebook
+NAME = ex02
 
 CC = clang++
 
 GFLAGS = -Wall -Wextra -Werror
 
-HEAD = Contacts.hpp
-
-SRCS = Contacts.cpp main.cpp
+SRCS = main.cpp
 
 OBJS =$(SRCS:.cpp=.o)
 
@@ -17,7 +15,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
-$(OBJS) : %.o : %.cpp $(HEAD)
+$(OBJS) : %.o : %.cpp
 
 clean :
 	rm -f $(OBJS)
