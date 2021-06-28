@@ -1,14 +1,12 @@
 .PHONY = all clean fclean re
 
-NAME = weapon
+NAME = replace
 
 CC = clang++
 
 GFLAGS = -Wall -Wextra -Werror
 
-HEAD = HumanB.hpp HumanA.hpp Weapon.hpp
-
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp
 
 OBJS =$(SRCS:.cpp=.o)
 
