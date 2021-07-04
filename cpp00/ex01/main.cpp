@@ -42,6 +42,7 @@ void get_list_contacts(Contacts contacts[8], int num)
 int main(void)
 {
     int num_contact = 0;
+    int old = 0;
     Contacts contacts[8];
     std::string command;
     while (1)
@@ -53,11 +54,15 @@ int main(void)
         else if (command == "ADD")
         {
             if (num_contact > 7)
-                std::cout << "No more space in phonebook\n";
+            {
+                old = 7;
+                num_contact = 0;
+            }
             else
             {
                 contacts[num_contact].init();
                 num_contact++;
+                old++;
             }
         }
         else if (command == "SEARCH")
@@ -65,7 +70,7 @@ int main(void)
             if (num_contact == 0)
                 std::cout << "Phonebook is empty" << std::endl;
             else
-                get_list_contacts(contacts, num_contact);
+                get_list_contacts(contacts, old);
         }
         else
            std::cout << "Invalid command, try again\n";
