@@ -8,7 +8,7 @@ class Fixed
 {
     private:
         int point;
-        static const int bits;
+        static const int bits = 8;
     public:
         Fixed();
         ~Fixed();
@@ -18,8 +18,8 @@ class Fixed
 
         Fixed& operator= (const Fixed &str);
 
-       //int getRawBits( void ) const;
-       //void setRawBits( int const raw );
+        int getRawBits( void ) const;
+        void setRawBits( int const raw );
         float toFloat( void ) const;
         int toInt( void ) const;
 };
