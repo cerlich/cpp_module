@@ -1,17 +1,25 @@
 #include "FragTrap.hpp"
 
+FragTrap::FragTrap():ClapTrap()
+{
+}
+
 FragTrap::FragTrap(const FragTrap& copy)
 {
     *this = copy;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name):ClapTrap(name)
 {
     this->name = name;
-    this->hitpoint = 100;
-    this->energyPoint = 100;
-    this->attackDamage = 30;
-    std::cout << name << " is ready fight." << std::endl;
+    //setAD(30);
+    //setHP(100);
+    //setEP(100);
+    hitpoint = 100;
+    energyPoint = 100;
+    attackDamage = 30;
+    std::cout << "FragTrap " << name << " ready to fight." << std::endl;
+    //std::cout << this->attackDamage << std::endl;
 }
 
 FragTrap::~FragTrap()

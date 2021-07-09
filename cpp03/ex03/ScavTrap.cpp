@@ -1,16 +1,23 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap():ClapTrap()
+{
+}
+
 ScavTrap::ScavTrap(const ScavTrap& copy)
 {
     *this = copy;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 {
     this->name = name;
-    this->hitpoint = 100;
-    this->energyPoint = 50;
-    this->attackDamage = 20;
+    //setHP(100);
+    //setEP(50);
+    //setAD(20);
+    hitpoint = 100;
+    energyPoint = 50;
+    attackDamage = 20;
     std::cout << name << " is ready fight." << std::endl;
 }
 
