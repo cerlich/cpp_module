@@ -1,15 +1,15 @@
 
 .PHONY = all clean fclean re
 
-NAME = ex00
+NAME = ex01
 
 CC = clang++
 
 GFLAGS = -Wall -Wextra -Werror
 
-HEAD = Fixed.hpp
+HEAD = ClapTrap.hpp
 
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp ClapTrap.cpp
 
 OBJS =$(SRCS:.cpp=.o)
 

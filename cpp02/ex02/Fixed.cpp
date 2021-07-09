@@ -24,7 +24,7 @@ Fixed::Fixed(const int i)
 Fixed::Fixed(const float f)
 {                                                           // float to fixed (x)
     //std::cout << "Float constructor called" << std::endl;   // x = floating_input * 2^(fractional_bits)
-    this->point = roundf(f * (1 << Fixed::bits));                  // 2^bits == 1 << bits
+    this->point = roundf(f * (1 << Fixed::bits));              // 2^bits == 1 << bits
 }                                                           
 
 Fixed::~Fixed()
@@ -85,32 +85,6 @@ const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
         return (b);
 }
 
-//Fixed const &max(Fixed const &a, Fixed const &b)
-//{
-//	return (Fixed::max(a, b));
-//}
-//
-//Fixed &max(Fixed &a, Fixed &b)
-//{
-//	return (Fixed::max(a, b));
-//}
-
-//Fixed &max(Fixed &a, Fixed &b)
-//{
-//    if (a > b)
-//        return (a);
-//    else
-//        return (b);
-//}
-//
-//const Fixed &max(const Fixed &a, const Fixed &b)
-//{
-//    if (a > b)
-//        return (a);
-//    else
-//        return (b);
-//}
-
 Fixed& Fixed::operator= (const Fixed &str)
 {
     //std::cout << "Assignation operator called" << std::endl;
@@ -142,7 +116,7 @@ Fixed Fixed::operator/(const Fixed &f)
 Fixed Fixed::operator-(const Fixed &f)
 {
     Fixed tmp;
-    int val = (f.getRawBits() - this->point) >> this->Fixed::bits;
+    int val = (f.getRawBits() - this->point);
     tmp.setRawBits(val);
     return (tmp);
 }
@@ -150,7 +124,7 @@ Fixed Fixed::operator-(const Fixed &f)
 Fixed Fixed::operator+(const Fixed &f)
 {
     Fixed tmp;
-    int val = (f.getRawBits() + this->point) >> this->Fixed::bits;
+    int val = (f.getRawBits() + this->point);
     tmp.setRawBits(val);
     return (tmp);
 }
@@ -185,6 +159,8 @@ bool Fixed::operator!=(const Fixed &f)
     return(this->point != f.getRawBits());
 }
 
+//префикс
+
 Fixed Fixed::operator++()
 {
     this->point++;
@@ -197,17 +173,18 @@ Fixed Fixed::operator--()
     return (*this);
 }
 
+//постфикс
+
 Fixed Fixed::operator--(int val)
 {
-    Fixed tmp (*this);
-    operator--();
+    Fixed tmp = *this;
+    --*this;
     return (tmp);
 }
 
 Fixed Fixed::operator++(int val)
 {
-
-    Fixed tmp (*this);
-    operator++();
+    Fixed tmp = *this;
+    ++*this;
     return (tmp);
 }

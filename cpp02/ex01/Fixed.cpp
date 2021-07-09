@@ -24,7 +24,7 @@ Fixed::Fixed(const int i)
 Fixed::Fixed(const float f)
 {                                                           // float to fixed (x)
     std::cout << "Float constructor called" << std::endl;   // x = floating_input * 2^(fractional_bits)
-    this->point = roundf(f * (1 << Fixed::bits));                  // 2^bits == 1 << bits
+    this->point = roundf(f * (1 << Fixed::bits));           // 2^bits == 1 << bits
 }                                                           
 
 int Fixed::getRawBits( void ) const
