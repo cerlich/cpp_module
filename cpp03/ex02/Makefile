@@ -7,9 +7,9 @@ CC = clang++
 
 GFLAGS = -Wall -Wextra -Werror
 
-HEAD = ClapTrap.hpp ScavTrap.hpp
+HEAD = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS =$(SRCS:.cpp=.o)
 
