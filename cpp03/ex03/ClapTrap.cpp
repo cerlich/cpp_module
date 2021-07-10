@@ -7,13 +7,10 @@ ClapTrap::ClapTrap()
 ClapTrap::ClapTrap(std::string name)
 {
     this->name = name;
-   // setHP(10);
-    //setEP(10);
-    //setAD(0);
     energyPoint = 10;
     attackDamage = 0;
     hitpoint = 10;
-    std::cout << this->name << " is ready to kill a monster." << std::endl;
+    std::cout << "ClapTrap " << this->name << " is ready to kill a monster." << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -62,34 +59,4 @@ void ClapTrap::takeDamage(unsigned int amount)
     if (this->hitpoint < 0)
         this->hitpoint = 0;
     std::cout << "HP: " << this->hitpoint << std::endl;
-}
-
-void ClapTrap::setHP(int hp)
-{
-    this->hitpoint = hp;
-}
-
-void ClapTrap::setAD(int hp)
-{
-    this->attackDamage = hp;
-}
-
-void ClapTrap::setEP(int hp)
-{
-    this->energyPoint = hp;
-}
-
-int ClapTrap::getAD()
-{
-    return (attackDamage);
-}
-
-int ClapTrap::getEP()
-{
-    return (energyPoint);
-}
-
-int ClapTrap::getHP()
-{
-    return (hitpoint);
 }

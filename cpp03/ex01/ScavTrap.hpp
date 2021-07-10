@@ -6,6 +6,8 @@
 
 class ScavTrap : public ClapTrap
 {
+    protected:
+        ScavTrap();
     public:
         ScavTrap(std::string name);
         ScavTrap(const ScavTrap& copy);
@@ -14,6 +16,7 @@ class ScavTrap : public ClapTrap
         ScavTrap& operator= (const ScavTrap& str);
 
         void guardGate();
+        void attack(std::string const & target);
 };
 
 #endif

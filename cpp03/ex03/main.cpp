@@ -5,19 +5,19 @@
 
 int main(void)
 {
-    ClapTrap Joe("Joe");
-    ScavTrap Mo("Mo");
-    FragTrap Po("Po");
-    Joe.attack("RadScorpion");
-    Joe.takeDamage(9);
-    Joe.beRepaired(1);
+    //ClapTrap Joe("Joe");
+    //ScavTrap Mo("Mo");
+    //FragTrap Po("Po");
+    //Joe.attack("RadScorpion");
+    //Joe.takeDamage(9);
+    //Joe.beRepaired(1);
+//
+    //Mo.attack("Puck");
+    //Mo.takeDamage(50);
+    //Mo.beRepaired(20);
 
-    Mo.attack("Puck");
-    Mo.takeDamage(50);
-    Mo.beRepaired(20);
-
-    DiamondTrap Lu("lu");
-    Lu.attack("Foo");
-    Lu.whoAmI();
+    DiamondTrap Lu("Lu");
+    //Lu.attack("Foo");
+    //Lu.whoAmI();
     return (0);
 }

@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap():ClapTrap()
+ScavTrap::ScavTrap()
 {
 }
 
@@ -9,12 +9,9 @@ ScavTrap::ScavTrap(const ScavTrap& copy)
     *this = copy;
 }
 
-ScavTrap::ScavTrap(std::string name):ClapTrap(name)
+ScavTrap::ScavTrap(std::string name)
 {
     this->name = name;
-    //setHP(100);
-    //setEP(50);
-    //setAD(20);
     hitpoint = 100;
     energyPoint = 50;
     attackDamage = 20;
@@ -23,6 +20,7 @@ ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 
 ScavTrap::~ScavTrap()
 {
+        std::cout << "ScavTrap destructor" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator= (const ScavTrap& s)

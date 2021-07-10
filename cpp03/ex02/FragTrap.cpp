@@ -11,7 +11,7 @@ FragTrap::FragTrap(std::string name)
     this->hitpoint = 100;
     this->energyPoint = 100;
     this->attackDamage = 30;
-    std::cout << name << " is ready fight." << std::endl;
+    std::cout << "FragTrap " << name << " shouts out his battle cry!" << std::endl;
 }
 
 FragTrap::~FragTrap()

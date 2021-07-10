@@ -3,15 +3,20 @@
 
 int main(void)
 {
-    ClapTrap Joe("Joe");
+   //ClapTrap Joe("Joe");
+
+   //Joe.attack("RadScorpion");
+   //Joe.takeDamage(9);
+   //Joe.beRepaired(1);
+
     ScavTrap Mo("Mo");
-    Joe.attack("RadScorpion");
-    Joe.takeDamage(9);
-    Joe.beRepaired(1);
 
-    Mo.attack("Puck");
-    Mo.takeDamage(50);
-    Mo.beRepaired(20);
-
+    Mo.attack("Mole rat");
+    Mo.takeDamage(20);
+    Mo.beRepaired(8);
+    Mo.takeDamage(30);   
+    Mo.takeDamage(80);
+    Mo.attack("Mole rat");
+    Mo.guardGate();
     return (0);
 }

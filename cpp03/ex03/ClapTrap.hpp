@@ -14,20 +14,13 @@ class ClapTrap
         ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& copy);
-        ~ClapTrap();
+        virtual ~ClapTrap();
 
         ClapTrap& operator= (const ClapTrap& str);
 
         void attack(std::string const & target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-
-        int getHP();
-        int getAD();
-        int getEP();
-        void setHP(int hp);
-        void setAD(int ad);
-        void setEP(int ep);
 
 };
 

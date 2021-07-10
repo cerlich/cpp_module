@@ -1,19 +1,15 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap()
 {
 }
 
-DiamondTrap::DiamondTrap(std::string name) :ClapTrap(name), ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name)
 {
     this->name = name;
-
-    //this->hitpoint = FragTrap::getHP();
-    //this->attackDamage = FragTrap::getAD();
-    //this->energyPoint =ScavTrap::getEP();
-    hitpoint = FragTrap::hitpoint;
-    attackDamage = FragTrap::attackDamage;
-    energyPoint = ScavTrap::energyPoint;
+    hitpoint = FragTrap::hp;
+    attackDamage = FragTrap::ad;
+    energyPoint = ScavTrap::ep;
     std::cout << "DiamondTrap " << name << " ready to fight" << std::endl;
 }
 
@@ -38,8 +34,11 @@ DiamondTrap &DiamondTrap::operator= (const DiamondTrap& s)
 void DiamondTrap::whoAmI()
 {
     std::cout << this->attackDamage << std::endl
-        << FragTrap::attackDamage << std::endl
-        << ScavTrap::attackDamage << std::endl
-        << ScavTrap::energyPoint << std::endl
-        << FragTrap::energyPoint << std::endl;
+        << this->hitpoint << std::endl
+        << this->energyPoint << std::endl;
+        //<< this->attackDamage << std::endl;
+       // << FragTrap::attackDamage << std::endl
+        //<< ScavTrap::attackDamage << std::endl
+        //<< ScavTrap::energyPoint << std::endl
+        //<< FragTrap::energyPoint << std::endl;
 } 
