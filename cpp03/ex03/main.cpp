@@ -5,19 +5,39 @@
 
 int main(void)
 {
-    //ClapTrap Joe("Joe");
-    //ScavTrap Mo("Mo");
-    //FragTrap Po("Po");
-    //Joe.attack("RadScorpion");
-    //Joe.takeDamage(9);
-    //Joe.beRepaired(1);
-//
-    //Mo.attack("Puck");
-    //Mo.takeDamage(50);
-    //Mo.beRepaired(20);
+   //ClapTrap Joe("Joe");
 
-    DiamondTrap Lu("Lu");
-    //Lu.attack("Foo");
-    //Lu.whoAmI();
+   //Joe.attack("RadScorpion");
+   //Joe.takeDamage(9);
+   //Joe.beRepaired(1);
+
+    //ScavTrap Mo("Mo");
+
+    //Mo.attack("Mole rat");
+    //Mo.takeDamage(20);
+    //Mo.beRepaired(8);
+    //Mo.takeDamage(30);   
+    //Mo.takeDamage(80);
+    //Mo.attack("Mole rat");
+    //Mo.guardGate();
+    //Mo.attack("Mole rat");
+
+   //FragTrap Lou("Lou");
+
+   //Lou.attack("Radroach");
+   //Lou.attack("Radroach");
+   //Lou.takeDamage(20);
+   //Lou.beRepaired(8);
+   //Lou.takeDamage(30);   
+   //Lou.attack("Radroach");
+   //Lou.highFivesGuys();
+   //Lou.attack("Radroach");
+
+    DiamondTrap Fro("Fro");
+
+    Fro.whoAmI();
+    Fro.attack("Radroach");
+    Fro.takeDamage(20);
+    Fro.beRepaired(8);  
     return (0);
 }

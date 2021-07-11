@@ -6,6 +6,8 @@
 
 class FragTrap : public ClapTrap
 {
+    protected:
+        FragTrap();
     public:
         FragTrap(std::string name);
         FragTrap(const FragTrap& copy);

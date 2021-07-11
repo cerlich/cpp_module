@@ -1,17 +1,35 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-    ClapTrap Joe("Joe");
-    ScavTrap Mo("Mo");
-    Joe.attack("RadScorpion");
-    Joe.takeDamage(9);
-    Joe.beRepaired(1);
+   //ClapTrap Joe("Joe");
 
-    Mo.attack("Puck");
-    Mo.takeDamage(50);
-    Mo.beRepaired(20);
+   //Joe.attack("RadScorpion");
+   //Joe.takeDamage(9);
+   //Joe.beRepaired(1);
 
+    //ScavTrap Mo("Mo");
+
+    //Mo.attack("Mole rat");
+    //Mo.takeDamage(20);
+    //Mo.beRepaired(8);
+    //Mo.takeDamage(30);   
+    //Mo.takeDamage(80);
+    //Mo.attack("Mole rat");
+    //Mo.guardGate();
+    //Mo.attack("Mole rat");
+
+    FragTrap Lou("Lou");
+
+    Lou.attack("Radroach");
+    Lou.attack("Radroach");
+    Lou.takeDamage(20);
+    Lou.beRepaired(8);
+    Lou.takeDamage(30);   
+    Lou.attack("Radroach");
+    Lou.highFivesGuys();
+    Lou.attack("Radroach");
     return (0);
 }

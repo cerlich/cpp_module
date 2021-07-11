@@ -1,7 +1,7 @@
 
 .PHONY = all clean fclean re
 
-NAME = ex01
+NAME = ex02
 
 CC = clang++
 

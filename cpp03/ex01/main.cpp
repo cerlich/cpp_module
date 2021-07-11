@@ -18,5 +18,6 @@ int main(void)
     Mo.takeDamage(80);
     Mo.attack("Mole rat");
     Mo.guardGate();
+    Mo.attack("Mole rat");    
     return (0);
 }

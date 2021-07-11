@@ -39,10 +39,13 @@ void ScavTrap::guardGate()
         std::cout << "Too few Energy points to enter in Gate keeper mode, need more than 25." << std::endl;
         return ;
     }
+    this->energyPoint = 0;
+    this->hitpoint += 50;
+    if (this->hitpoint > 100)
+        this->hitpoint = 100;
     std::cout << "ScavTrap " << name << " have enterred in Gate keeper mode." << std::endl
         << "All energy points are consumed and 50 hitpoint are restored. "
         <<  this->name << "'s Energy points: " << this->energyPoint << ", " << "HP: " << this->hitpoint << std::endl;
-    this->energyPoint = 0;
 }
 
 void ScavTrap::attack(std::string const & target)
