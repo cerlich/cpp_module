@@ -1,15 +1,15 @@
 
 .PHONY = all clean fclean re
 
-NAME = animal
+NAME = bsp
 
 CC = clang++
 
 GFLAGS = -Wall -Wextra -Werror
 
-HEAD = Cat.hpp Dog.hpp Animal.hpp Brain.hpp
+HEAD = Fixed.hpp Point.hpp
 
-SRCS = main.cpp Cat.cpp Dog.cpp Animal.cpp Brain.cpp
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 OBJS =$(SRCS:.cpp=.o)
 

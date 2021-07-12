@@ -2,7 +2,11 @@
 
 Animal::Animal()
 {
-    type = "Animal";
+    //type = "Animal";
+    for (int i = 0; i < 5; i++) 
+    {
+        
+    }
 }
 
 Animal::~Animal()
