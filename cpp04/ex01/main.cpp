@@ -5,31 +5,21 @@
 
 int main()
 {
-    int x;
+    int x = 4;
+    //const Animal* doge = new Dog;
+    //const Animal* cato = new Cat;
+    Animal *meta[x];
+    int i;
 
-    std::cin >> x;
-    Animal* meta = new Animal[x];
-    const Animal* doge = new Dog;
-    const Animal* cato = new Cat;
-    
-    meta->setCount(x);
-    //meta->init(*doge, *cato);
-    int i = 0;
-    while (i < x)
-    {
-        meta[i] = new Dog;
+    for (i = 0; i < x / 2; i++)
+        meta[i] = new Dog;   
+    for (i = x / 2 ; i < x ; i++)
+        meta[i] = new Cat;
+    for (i = 0 ; i < x ; i++) {
+       std::cout << meta[i]->getType() << " " << std::endl;
+       meta[i]->makeSound();
     }
-    while (i < x)
-    {
-       std::cout << meta[i].getType() << " " << std::endl;
-       i++;
-    }
-    //std::cout << meta->getType() << " " << std::endl;
-    //std::cout << j->getType() << " " << std::endl;
-    //std::cout << i->getType() << " " << std::endl;
-    //i->makeSound(); //will output the cat sound!
-    //j->makeSound();
-    //meta->makeSound();
-
+    for (i = 0; i < x; i++)
+        delete meta[i];
     return (0);
 }
