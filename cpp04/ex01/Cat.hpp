@@ -10,7 +10,7 @@ class Cat : public Animal
         Brain* brain;
     public:
         Cat();
-        ~Cat();
+        virtual ~Cat();
         Cat(const Cat& copy);
         Cat& operator= (const Cat& s);
 

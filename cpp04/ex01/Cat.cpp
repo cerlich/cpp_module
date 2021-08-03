@@ -4,19 +4,19 @@ Cat::Cat()
 {
     brain = new Brain();
     this->type = "Cat";
+    std::cout << "Cat's here!" << std::endl;
 }
 
 Cat::~Cat()
 {
     delete brain;
+    std::cout << "Cat runs away!" << std::endl;
 }
 
 Cat::Cat(const Cat& copy)
 {
-    delete brain;
-
     this->brain = new Brain(*copy.brain);
-    *this = copy;
+    this->type = copy.type;
 }
 
 Cat &Cat::operator= (const Cat& s)

@@ -11,7 +11,8 @@ class Brain
         Brain();
         ~Brain();
         Brain(const Brain& copy);
-        Brain& operator= (const Brain& s);        
+        Brain& operator= (const Brain& s);
+        std::string getIdea() const;
 };
 
 #endif

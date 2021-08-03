@@ -3,10 +3,12 @@
 Dog::Dog()
 {
     this->type = "Dog";
+    std::cout << "Dog's here!" << std::endl;
 }
 
 Dog::~Dog()
 {
+    std::cout << "Dog runs away!" << std::endl; 
 }
 
 Dog::Dog(const Dog& copy)

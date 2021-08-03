@@ -3,10 +3,12 @@
 Cat::Cat()
 {
     this->type = "Cat";
+    std::cout << "Cat's here!" << std::endl;
 }
 
 Cat::~Cat()
 {
+    std::cout << "Cat runs away!" << std::endl;    
 }
 
 Cat::Cat(const Cat& copy)

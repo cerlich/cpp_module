@@ -9,7 +9,7 @@ class Animal
         std::string type;
     public:
         Animal();
-        ~Animal();
+        virtual ~Animal();
         Animal(const Animal& copy);
         Animal& operator= (const Animal& s);
         std::string getType() const;

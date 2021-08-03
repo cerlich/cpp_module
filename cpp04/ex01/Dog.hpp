@@ -10,10 +10,11 @@ class Dog : public Animal
         Brain* brain;
     public:
         Dog();
-        ~Dog();
+        virtual ~Dog();
         Dog(const Dog& copy);
         Dog& operator= (const Dog& s);
 
+        void showBrain() const;
         virtual void makeSound() const;
 };
 

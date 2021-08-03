@@ -13,10 +13,8 @@ Cat::~Cat()
 
 Cat::Cat(const Cat& copy)
 {
-    delete brain;
-
     this->brain = new Brain(*copy.brain);
-    *this = copy;
+    this->type = copy.type;
 }
 
 Cat &Cat::operator= (const Cat& s)

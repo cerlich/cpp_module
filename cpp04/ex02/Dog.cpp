@@ -13,9 +13,8 @@ Dog::~Dog()
 
 Dog::Dog(const Dog& copy)
 {
-    delete brain;
     this->brain = new Brain(*copy.brain);
-    *this = copy;
+    this->type = copy.type;
 }
 
 Dog &Dog::operator= (const Dog& s)

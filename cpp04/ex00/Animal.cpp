@@ -2,15 +2,13 @@
 
 Animal::Animal()
 {
-    //type = "Animal";
-    for (int i = 0; i < 5; i++) 
-    {
-        
-    }
+    type = "Animal";
+    std::cout << "Animal crated" << std::endl;
 }
 
 Animal::~Animal()
 {
+    std::cout << "Animal destructed" << std::endl;   
 }
 
 Animal::Animal(const Animal& copy)
